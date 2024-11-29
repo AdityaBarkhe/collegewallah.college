@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>CollegeWallah | Top Colleges</title>
+     <link rel="stylesheet" href="index.css">
+     <script src="script.js"></script>
+</head>
+
+<body>
+     <div class="navbar">
+          <nav>
+               <div class="logo" onclick="off()">CW</div>
+               <div>
+                    <ul class="links support">
+                         <input type="text" name="SearchCollege" class="search" placeholder="Search">
+                         <li><a href="#">Home</a></li>
+                         <li><a href="ex.html">About</a></li>
+                         <li><a href="contact.html">Contact</a></li>
+                    </ul>
+               </div>
+               <div class="login" onclick="show()">
+                    LogIn
+               </div>
+          </nav>
+     </div>
+
+     <div class="floatLogin">
+          <!-- <span id="removeLogin">&times;</span> -->
+          <i>LogIn</i>
+
+          <form action="http://localhost/MySQLqueries/register.php" method="post" onsubmit="return validate()">
+               <label for="email">Email:</label>
+               <input type="email" id="email" name="email" required>
+
+               <label for="password">Password:</label>
+               <input type="password" id="password" name="password">
+
+               <button type="submit" id="LogIn">Login</button>
+
+               <span>OR</span>
+
+               <button id="SignUp">SignUp</button>
+
+          </form>
+     </div>
+
+     <div class="Sorting">
+          <i>Sort by</i>
+          <div class="items">
+               <li id="popularity">Popularity</li>
+               <li id="highest-fees">Highest Fees</li>
+               <li id="lowest-fees">Lowest Fees</li>
+               <li id="rating">Rating</li>
+               <li id="ranking">Ranking</li>
+          </div>
+     </div>
+
+     <div class="top10view">
+          <table>
+               <thead>
+                    <td>CW Rank</td>
+                    <td>College</td>
+                    <td>Course and Fees</td>
+                    <td>Rating</td>
+                    <td>Rank</td>
+               </thead>
+               <tbody id="college-data-body">
+               </tbody>
+          </table>
+     </div>
+</body>
+
+</html>

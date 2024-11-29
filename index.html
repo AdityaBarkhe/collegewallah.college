@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>CollegeWallah | Find Your college.</title>
+     <link rel="stylesheet" href="index.css">
+     <script src="script.js"></script>
+</head>
+
+<body>
+     <div class="navbar">
+          <nav>
+               <div class="logo" onclick="off()">CW</div>
+               <div>
+                    <ul class="links support">
+                         <input type="text" name="SearchCollege" class="search" placeholder="Search">
+                         <li><a href="#">Home</a></li>
+                         <li><a href="ex.html">About</a></li>
+                         <li><a href="contact.html">Contact</a></li>
+                    </ul>
+               </div>
+               <div class="login" onclick="show()">
+                    LogIn
+               </div>
+          </nav>
+     </div>
+
+     <div class="floatLogin">
+          <!-- <span id="removeLogin">&times;</span> -->
+          <i>LogIn</i>
+
+          <form action="http://localhost/MySQLqueries/register.php" method="post" onsubmit="return validate()">
+               <label for="email">Email:</label>
+               <input type="email" id="email" name="email" required>
+
+               <label for="password">Password:</label>
+               <input type="password" id="password" name="password">
+
+               <button type="submit" id="LogIn">Login</button>
+
+               <span>OR</span>
+
+               <button id="SignUp">SignUp</button>
+
+          </form>
+     </div>
+
+     <!-- Next Implementation -->
+
+     <!-- <div class="floatLogin floatSignUp">
+          <span id="removeLogin">&times;</span>
+          <i>SignUp</i>
+
+          <form action="http://localhost/MySQLqueries/register.php" method="post" onsubmit="return validate()">
+               <label for="email">Email:</label>
+               <input type="email" id="email" name="email" required>
+
+               <label for="password">Password:</label>
+               <input type="password" id="password" name="password">
+
+               <button type="submit" id="LogIn">Login</button>
+
+               <span>OR</span>
+
+               <button id="SignUp">SignUp</button>
+
+          </form>
+     </div> -->
+
+     <div class="main support">
+          <p>Find <i id="textChange"></i> colleges in Mumbai</p>
+          <input type="text" name="SearchCollege" class="search" placeholder="Search">
+     </div>
+
+     <hr>
+
+     <div class="filters">
+          <p> Popular Courses</p>
+          <div class="courses">
+               <div class="course" id="course1">Science</div>
+               <div class="course" id="course2">Arts</div>
+               <div class="course" id="course3">Commerce</div>
+               <div class="course" id="course4">Degree & Diploma</div>
+               <div class="course" id="course5">More..</div>
+          </div>
+
+          <p>Explore Programs</p>
+          <div class="levelFilters">
+               <div class="rank"> <a href="top.html"> Top Rank Colleges</a>
+                    <div>College ranked based on real data</div>
+               </div>
+               <div class="Fees"><a href="maxfeeCols.html">Fees</a>
+                    <div>Maximux Fees Colleges</div>
+               </div>
+               <div class="location"><a href="popularCols.html">Location</a>
+                    <div>Most Popular</div>
+               </div>
+          </div>
+
+          <p>Top 10 Colleges</p>
+          <div class="top10view">
+               <table>
+                    <thead>
+                         <td>CW Rank</td>
+                         <td>College</td>
+                         <td>Course and Fees</td>
+                         <td>Rating</td>
+                         <td>Rank</td>
+                    </thead>
+                    <tbody id="college-data-body">
+                    </tbody>
+               </table>
+          </div>
+
+          <div class="topCourses">
+               Top Courses
+               <div class="courses">
+                    <div class="course" id="course1">BCA</div>
+                    <div class="course" id="course2">MMA</div>
+                    <div class="course" id="course3">BSc</div>
+                    <div class="course" id="course4">MSc</div>
+                    <div class="course" id="course5">More..</div>
+               </div>
+          </div>
+     </div>
+     
+     <script>
+          function validate() {
+               var email = document.getElementById('email').value;
+               var password = document.getElementById('password').value;
+
+               if (email == "" || password == "") {
+                    alert("Please fill in all required fields.");
+                    return false;
+               }
+               alert("Form is being submitted.");
+               return true; // Continue with form submission if validation passes
+          }
+     </script>
+
+
+</body>
+
+</html>
